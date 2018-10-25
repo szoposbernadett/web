@@ -1,125 +1,84 @@
 <html>
 <head>
+<title>Sign UP</title>
+
 </head>
-  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-  
+<body bgcolor="#FFFF99">
+<form action="2.php" method="post">
+<center>
+<h1>You can register here!<h2>
+</br>
+<table border="1" width="300" height="150">
 
-  div {
-    box-sizing: border-box;
-    margin: auto;
-    width: 50%;
-    border: 3px black;
-    padding: 10px;
-}
+  <tr><td>FirstName:</td>
+  <td><input type="text" name="FirstName"></td>
+  </tr>
 
+  <tr><td>LastName:</td>
+  <td><input type="text" name="LastName"></td>
+  </tr> 
 
-/* Full-width input fields */
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
+  <tr><td>Email:</td>
+  <td><input type="text" name="Email"></td>
+  </tr>
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: 99FFFF;
-  outline: none;
-}
+<tr><td>Username:</td>
+  <td><input type="text" name="Username"></td>
+  </tr>
 
-hr {
-  border: 1px solid 99FFFF;
-  margin-bottom: 25px;
-}
+<tr><td>Password:</td>
+  <td><input type="text" name="Password"></td>
+  </tr>
 
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }
-}
-</style>
-<body style="background-color:FFFFCC;">
-</body>
- <form action="action_page.php" style="border:1px solid #ccc">
-  <div class="container">
-    <h1>Sign Up</h1>
-    
-    <hr>
-<label for="First Name"><b>First Name</b></label>
-    <input type="text" placeholder="Enter First Name" name="firstname" required>
-
-    <label for="Last Name"><b>Last Name</b></label>
-    <input type="text" placeholder="Enter Last Name" name="lastname" required>
+  <tr> <td colspan="5" align="center">
+  <input type="submit" name="signup" value="signup">
+  </td>
+  </tr>
+  <tr> <td colspan="5" align="center">
+  <input type="button" onclick="location.href='1.php';" value="Cancel" />
+  </td>
+  </tr>
 
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="uname"><b>Uname</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-    <label>
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-    </label>
-
-    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-    <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
-    </div>
-  </div>
-</form> 
+</center>
 </html>
+
+
+<?php
+
+
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="web";
+
+//create connection
+
+//$conn=new mysqli($servername, $username, $password, $dbname);
+if (isset($_POST['signup']))
+{
+    $FirstName=$_POST['FirstName'];
+   $LastName=$_POST['LastName'];
+  $Email=$_POST['Email'];
+   $Username=$_POST['Username'];
+   $Password=$_POST['Password'];
+
+  /* $query="insert into web(FirstName, LastName, Email,Username,Password) values ('$FirstName','$LastName','$Email','$Username','$Password')";*/
+
+   /*if (mysqli_query($query))
+   {
+     echo" <h2>You have registered successfully</h2>";
+   }
+   }*/
+   $con=mysqli_connect($servername, $username, $password, $dbname);
+   
+   
+   $sql="insert into register (FirstName, LastName, Email,Username,Password) values ('$FirstName','$LastName','$Email','$Username','$Password')";
+
+   $query=mysqli_query($con,$sql);
+   
+   
+ }
+ 
+?>
