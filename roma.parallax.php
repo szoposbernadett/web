@@ -27,6 +27,10 @@ body, html {
         background-attachment: scroll;
     }
 }
+.responsive{
+	width:100%;
+	height:auto;
+}
 
 
 * {
@@ -58,6 +62,11 @@ body, html {
 </head>
 <body>
 
+
+
+
+
+
 <div class="parallax"></div>
 
 
@@ -75,20 +84,20 @@ body, html {
 
 <div class="row">
   <div class="column" >
-    <h2>Colosseum</h2>
-    <img src="c.jpg" width="480" height="360">
-    <font size="5">The Colosseum or Coliseum , also known as the Flavian Amphitheatre  or Colosseo is an oval amphitheatre in the centre of the city of Rome, Italy. Built of travertine, tuff, and brick-faced concrete, it is the largest amphitheatre ever built.</font>
+    <h2 style="font-size:4vw;">Colosseum</h2>
+    <img src="c.jpg" width="480" height="360" class="responsive">
+    <p style="font-size:2vw;">The Colosseum or Coliseum , also known as the Flavian Amphitheatre  or Colosseo is an oval amphitheatre in the centre of the city of Rome, Italy. Built of travertine, tuff, and brick-faced concrete, it is the largest amphitheatre ever built.</p>
   </div>
   <div class="column">
-    <h2>Trevi fountain</h2>
-    <img src="t.jpg" width="480" height="360">
-    <font size="5">The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini. Standing 26.3 metres high and 49.15 metres  wide, it is the largest Baroque fountain in the city and one of the most famous fountains in the world. The fountain has appeared in several notable films, including Federico Fellini's La Dolce Vita, the eponymous Three Coins in the Fountain, The Lizzie McGuire Movie, and Roman Holiday."</font>
+    <h2 style="font-size:4vw;">Trevi fountain</h2>
+    <img src="t.jpg" width="480" height="360" class="responsive">
+    <p style="font-size:1.5vw;">The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini. Standing 26.3 metres high and 49.15 metres  wide, it is the largest Baroque fountain in the city and one of the most famous fountains in the world. The fountain has appeared in several notable films, including Federico Fellini's La Dolce Vita, the eponymous Three Coins in the Fountain, The Lizzie McGuire Movie, and Roman Holiday."</p>
   </div>
   <div class="column">
 
-    <h2>Peter's Basilica</h2>
-    <img src="s.jpg" width="480" height="360">
-    <font size="5">The Papal Basilica of St. Peter in the Vatican , or simply St. Peter's Basilica (Latin: Basilica Sancti Petri), is an Italian Renaissance church in Vatican City, the papal enclave within the city of Rome</font>
+    <h2 style="font-size:4vw;">Peter's Basilica</h2>
+    <img src="s.jpg" width="480" height="360" class="responsive">
+    <p style="font-size:2vw;">The Papal Basilica of St. Peter in the Vatican , or simply St. Peter's Basilica (Latin: Basilica Sancti Petri), is an Italian Renaissance church in Vatican City, the papal enclave within the city of Rome</p>
   </div>
 </div>
 </div>
